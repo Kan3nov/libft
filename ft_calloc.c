@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 16:50:12 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/06 18:33:27 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/17 14:13:40 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t n, size_t size)
 
 	if (size == 0 || n == 0)
 		ptr = malloc(0);
+	else if(n * size > UINT_MAX)
+		return NULL;
 	else
 	{
 		ptr = malloc(size * n);
@@ -28,8 +30,9 @@ void	*ft_calloc(size_t n, size_t size)
 
 int main(void)
 {
-	size_t x = 4294967300;// a value greater than 2^32
-	printf("%ld \n",x);
+	printf("maximum size :%u \n", UINT_MAX);
+	size_t x =  111111111111111;// a value greater than 2^32
+	printf("maximum size :%lu \n", x);
 
 	char *meow = calloc(x, 1);
 	if (meow == NULL)
