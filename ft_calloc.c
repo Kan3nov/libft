@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 16:50:12 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/17 14:13:40 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/19 14:54:50 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_calloc(size_t n, size_t size)
 	}
 	return ptr;
 }
-
+/*
 int main(void)
 {
 	printf("maximum size :%u \n", UINT_MAX);
@@ -48,3 +48,4 @@ int main(void)
 	free (meow);
 	return (0);
 }
+*/

@@ -6,13 +6,13 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:08:40 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/05 15:10:15 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/19 15:17:46 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
