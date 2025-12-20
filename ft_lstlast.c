@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:52:38 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/19 11:54:22 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/20 10:46:13 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	while ((lst -> next) != NULL)
-		lst -> next = lst -> next;
+		lst = lst -> next;
 	return (lst);
-} 
+}

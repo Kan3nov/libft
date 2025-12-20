@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 14:42:20 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/19 18:55:23 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/20 11:28:36 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_elem = ft_lstnew(f(lst -> content));
 		if (!new_elem)
 		{
-			ft_lstclear(&new_list, del);
+			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_lst, new_elem);

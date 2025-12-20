@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 14:39:53 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/19 14:42:11 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/20 10:54:30 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst != NULL)
 	{
-		f(lst);
+		f(lst -> content);
 		lst = lst -> next;
 	}
 }
