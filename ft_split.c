@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 15:51:32 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/17 20:55:08 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/20 15:00:40 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ static size_t	count_words(char *s, char c)
 	size_t	len;
 	size_t	count;
 
-	if (*s == 0)
-		return (1);
 	len = ft_strlen(s);
 	word = 0;
 	count = 0;
@@ -70,8 +68,6 @@ static char	**split(char const *s, char c, char **str_arr)
 		}
 		index++;
 	}
-	if (*s == 0)
-		str_arr[index2++] = (char *)s;
 	str_arr[index2] = NULL;
 	return (str_arr);
 }
@@ -80,6 +76,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**str_arr;
 
+	if (*s == 0)
+		return (NULL);
 	str_arr = malloc (sizeof(char *) * (count_words((char *)s, c) + 1));
 	if (!str_arr)
 		return (NULL);

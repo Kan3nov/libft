@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 16:14:35 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/20 13:12:52 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/20 14:48:59 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,7 @@
 
 # include <stdlib.h>
 # include <stdint.h>
-# include <limits.h>
 # include <unistd.h>
-//these includes will be omitted after testing.
-# include <stdio.h>
-# include <string.h>
-# include <stdlib.h>
-# include <ctype.h>
-# include <bsd/string.h>
 
 typedef struct s_list
 {
