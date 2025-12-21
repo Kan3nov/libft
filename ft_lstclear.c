@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:59:24 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/20 10:52:38 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/21 23:17:07 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*node;
+	t_list	**temp;
 
-	while (((*lst)->next) != NULL)
+	if (!lst || !*lst || !del)
+		return ;
+	temp = lst;
+	while (((*temp)->next) != NULL)
 	{
-		node = (*lst);
-		*lst = (*lst)-> next;
+		node = (*temp);
+		*temp = (*temp)-> next;
 		ft_lstdelone(node, del);
 	}
-	ft_lstdelone(*lst, del);
+	ft_lstdelone(*temp, del);
 	lst = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:54:35 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/19 11:55:52 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/21 23:16:50 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	last = ft_lstlast(*lst);
-	last -> next = new;
+	if (*lst == NULL)
+		*lst = ft_lstnew(new -> content);
+	else
+	{
+		last = ft_lstlast(*lst);
+		last -> next = new;
+	}
 }

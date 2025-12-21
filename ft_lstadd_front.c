@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:48:50 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/20 10:45:25 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/21 22:46:46 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new -> next = *(lst);
+	*(lst) = new;
 }
