@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 15:51:32 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/20 15:00:40 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/22 13:10:10 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**str_arr;
 
-	if (*s == 0)
-		return (NULL);
 	str_arr = malloc (sizeof(char *) * (count_words((char *)s, c) + 1));
 	if (!str_arr)
 		return (NULL);

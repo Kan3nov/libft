@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 18:36:34 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/05 18:59:57 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/22 10:39:52 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*lop;
 
 	index = 0;
+	c = c % 256;
 	lop = NULL;
 	while (*(s + index))
 	{

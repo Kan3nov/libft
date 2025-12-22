@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 20:21:12 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/20 13:56:42 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/22 13:26:11 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,11 @@ char	*ft_itoa(int n)
 	size_t	len;
 
 	if (n == -2147483648)
-		return ("-2147483648");
+	{
+		s = malloc(12);
+		ft_memmove(s, "-2147483648", 12);
+		return (s);
+	}
 	len = count_dig(n);
 	s = malloc(len + 1);
 	idx = 0;

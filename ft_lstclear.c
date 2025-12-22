@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:59:24 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/21 23:17:07 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/22 13:34:28 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(node, del);
 	}
 	ft_lstdelone(*temp, del);
-	lst = NULL;
+	*lst = NULL;
 }
