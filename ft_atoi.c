@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 16:02:22 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/22 11:18:19 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/24 16:18:30 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_atoi(const char *nptr)
 	index = 0;
 	num_len = 0;
 	nptr = (char *)(nptr);
-	while (*nptr >= 9 && *nptr <= 13)
+	while ((*nptr >= 9 && *nptr <= 13) || (*nptr == 32))
 		nptr++;
 	if (*nptr == '+')
 		nptr++;

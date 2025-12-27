@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 14:14:40 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/17 15:21:05 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/25 13:10:37 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (len > ft_strlen((char *)(s + start)))
 		len = ft_strlen((char *)(s + start));
+	if (start > ft_strlen((char *)(s)))
+		return (ft_calloc(1, 1));
 	new_str = malloc(len + 1);
 	if (!new_str)
 		return (NULL);

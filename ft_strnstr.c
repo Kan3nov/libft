@@ -6,7 +6,7 @@
 /*   By: klafi <kanan.lafi@learner.42.tech>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 20:59:07 by klafi             #+#    #+#             */
-/*   Updated: 2025/12/06 16:01:26 by klafi            ###   ########.fr       */
+/*   Updated: 2025/12/22 14:06:58 by klafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static	char	*find(char *big, char *little, size_t len, size_t length)
 	return (NULL);
 }
 
-char	*ft_strnstr(const char *big,	const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	length;
 
